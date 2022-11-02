@@ -1,0 +1,105 @@
+:root {
+
+  --crad-items-color: rgb(71, 71, 71);
+}
+
+.card {
+  border: 1px solid rgb(75, 75, 75);
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgb(89, 89, 89);
+  flex: 1 1 280px;
+  height: 430px;
+  padding: 10px;
+  width: 260px;
+}
+
+.normal {
+  background-color: rgb(187, 187, 187);
+}
+
+.raro {
+  background-color: orange;
+}
+
+.muito {
+  background-color: indigo;
+}
+
+.card-Infos {
+  border-radius: 5px;
+  display: grid;
+  gap: 5px;
+  grid-template: 'title title' 6%
+    'img img' 50%
+    'descri descri' 13%
+    'power power' 10%
+    'force life' 10%
+    'rare rare' 5%;
+  grid-template-columns: 1fr 1fr;
+  height: 400px;
+  padding: 2px;
+  width: 100%;
+}
+
+.card-Infos img {
+  border: 1px solid var(--crad-items-color);
+  grid-area: img;
+  max-height: 200px;
+  min-height: 150px;
+  width: 100%;
+}
+
+.card-Infos p {
+  margin: auto;
+  text-align: center;
+}
+
+.card-title {
+  background-color: var(--crad-items-color);
+  border-radius: 10px 10px 0 0;
+  grid-area: title;
+  padding: 2px;
+  text-align: center;
+  width: 100%;
+}
+
+.description-card {
+  background-color: var(--crad-items-color);
+  border-radius: 0 0 10px 10px;
+  grid-area: descri;
+  height: 100%;
+  padding: 5px;
+  width: 100%;
+}
+
+.life {
+  grid-area: life;
+}
+
+.force {
+  grid-area: force;
+}
+
+.power {
+  grid-area: power;
+}
+
+.rare-card {
+  font-weight: 900;
+  grid-area: rare;
+  text-shadow: 1px 1px 1px black;
+}
+
+.life, .force, .power {
+  background-color: var(--crad-items-color);
+  border-radius: 10px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 4fr 1fr;
+  padding: 10px;
+}
+
+strong {
+  margin: auto 0;
+}
+

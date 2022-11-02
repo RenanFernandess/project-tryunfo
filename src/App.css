@@ -1,0 +1,76 @@
+:root {
+
+  --main-background-color: rgb(35, 38, 41);
+
+  --items-background-color: rgb(60, 64, 68);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-background-color);
+  color: rgb(243, 235, 235);
+}
+
+header {
+  background-color: black;
+  height: 80px;
+  left: 0;
+  padding: 20px 40px;
+  text-align: center;
+  top: 0;
+}
+
+main {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: 'form form preview preview'
+    'filter cards cards cards';
+  grid-template-columns: repeat(4, 1fr);
+  padding: 40px;
+}
+
+.container {
+  background-color: var(--items-background-color);
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.Form-Container {
+  grid-area: form;
+}
+
+.preview {
+  grid-area: preview;
+}
+
+.preview section:nth-child( 1 ) {
+  margin: 0 auto;
+}
+
+.cards-container {
+  grid-area: cards;
+  min-height: 50px;
+  width: 100%;
+}
+
+.cards-container h2:nth-child( 1 ) {
+  text-align: center;
+}
+
+.cards {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.filter {
+  grid-area: filter;
+  text-align: center;
+}
